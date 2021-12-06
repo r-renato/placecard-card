@@ -1,5 +1,5 @@
 # Discontinued
-I have no possibility to support this project any more. Fill free to fork.
+I have no possibility to support this project any more. Feel free to fork.
 
 # Lovelace Extended Banner Card
 
