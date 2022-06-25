@@ -1,4 +1,5 @@
 {
+    "homeassistant": "0.100.0",
     "name": "Placecard Card",
     "render_readme": true,
     "filename": "placecard-card.js"
