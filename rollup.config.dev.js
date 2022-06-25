@@ -6,7 +6,7 @@ import { terser } from "rollup-plugin-terser";
 import json from '@rollup/plugin-json';
 
 export default {
-  input: ["src/extended-banner-card.ts"],
+  input: ["src/placecard-card.ts"],
   output: {
     dir: "./dist",
     format: "es",

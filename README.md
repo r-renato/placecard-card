@@ -41,7 +41,7 @@ Use `map_attribute` to rewrite entity fields the same way as with `map_state`
 
 | Key | Type | Description |
 | --- | --- | --- |
-| type | _*string_ | Always `'custom:extended-banner-card'` |
+| type | _*string_ | Always `'custom:placecard-card'` |
 | header | _string_ or _map_ | Remove to hide header. See [header configuration](#header-configuration) for options
 | background | _string_ | A valid CSS color to use as the background  |
 | color | _string_ | A valid CSS color to use as the text color |

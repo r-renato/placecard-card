@@ -2,13 +2,13 @@ import { ActionConfig, EntityConfig, LovelaceCard, LovelaceCardConfig, LovelaceC
 
 declare global {
   interface HTMLElementTagNameMap {
-    'extended-banner-card-editor': LovelaceCardEditor;
+    'placecard-card-editor': LovelaceCardEditor;
     'hui-error-card': LovelaceCard;
   }
 }
 
 // TODO Add your configuration elements here for type-checking
-export interface ExtendedBannerCardConfig extends LovelaceCardConfig {
+export interface PlacecardCardConfig extends LovelaceCardConfig {
   type: string;
   header?: any;
   show_warning?: boolean;
@@ -17,13 +17,13 @@ export interface ExtendedBannerCardConfig extends LovelaceCardConfig {
   rowSize?: number;
   test_gui?: boolean;
   color?: string;
-  entities: ExtendedBannerCardEntityConfig[];
+  entities: PlacecardCardEntityConfig[];
   tap_action?: ActionConfig;
   hold_action?: ActionConfig;
   double_tap_action?: ActionConfig;
 }
 
-export interface ExtendedBannerCardEntityConfig extends EntityConfig {
+export interface PlacecardCardEntityConfig extends EntityConfig {
   domain: any;
   attribute?: any;
   error?: any;

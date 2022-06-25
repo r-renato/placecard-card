@@ -32,7 +32,7 @@ const plugins = [
 
 export default [
   {
-    input: 'src/extended-banner-card.ts',
+    input: 'src/placecard-card.ts',
     output: {
       dir: 'dist',
       format: 'es',

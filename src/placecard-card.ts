@@ -20,7 +20,7 @@ import {
 } from 'custom-card-helpers'; // This is a community maintained npm module with common helper functions/types
 
 import { hasConfigOrEntitiesChanged } from './has-changed';
-import type { ExtendedBannerCardConfig, ExtendedBannerCardEntityConfig } from './types';
+import type { PlacecardCardConfig, PlacecardCardEntityConfig } from './types';
 import { parseEntity, readableColor, isIcon, createElement } from "./utils";
 import { actionHandler } from './action-handler-directive';
 import { CARD_VERSION } from './const';
@@ -37,16 +37,16 @@ import filterEntity from "./filterEntity";
 // This puts your card into the UI card picker dialog
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: 'extended-banner-card',
-  name: 'Extended Banner Card',
+  type: 'placecard-card',
+  name: 'Placecard Card',
   description: 'Banner Card refactored and improved',
 });
 
-@customElement('extended-banner-card')
-export class ExtendedBannerCard extends LitElement {
+@customElement('placecard-card')
+export class PlacecardCard extends LitElement {
 
   /*public static async getConfigElement(): Promise<LovelaceCardEditor> {
-    return document.createElement('extended-banner-card-editor');
+    return document.createElement('placecard-card-editor');
   }*/
 
   public static getStubConfig(): object {
@@ -54,9 +54,9 @@ export class ExtendedBannerCard extends LitElement {
   }
 
   @property({ attribute: false }) public hass!: HomeAssistant;
-  @internalProperty() private config!: ExtendedBannerCardConfig;
+  @internalProperty() private config!: PlacecardCardConfig;
 
-  private entityValues!: ExtendedBannerCardEntityConfig[];
+  private entityValues!: PlacecardCardEntityConfig[];
 
   public getCardSize(): number {
     return 3;
@@ -68,7 +68,7 @@ export class ExtendedBannerCard extends LitElement {
     return () => this.hass.callService(domain, action, { entity_id });
   }
 
-  public setConfig(config: ExtendedBannerCardConfig): void {
+  public setConfig(config: PlacecardCardConfig): void {
     if (!config) {
       throw new Error(localize('common.invalid_configuration'));
     }
@@ -103,7 +103,7 @@ export class ExtendedBannerCard extends LitElement {
     };
   }
 
-  private _parseEntity(config): ExtendedBannerCardEntityConfig {
+  private _parseEntity(config): PlacecardCardEntityConfig {
     const state = this.hass.states[config.entity];
     const attributes = state ? state.attributes : {};
 

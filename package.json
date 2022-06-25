@@ -1,5 +1,5 @@
 {
-  "name": "extended-banner-card",
+  "name": "placecard-card",
   "version": "1.3.2",
   "description": "Lovelace extended banner card",
   "keywords": [
@@ -10,8 +10,8 @@
     "lovelace",
     "custom-cards"
   ],
-  "module": "extended-banner-card.js",
-  "repository": "git@github.com:estevez-dev/extended-banner-card.git",
+  "module": "placecard-card.js",
+  "repository": "git@github.com:r-renato/placecard-card.git",
   "author": "Yegor Vialov <vyalov.egor@gmail.com>",
   "license": "MIT",
   "dependencies": {
