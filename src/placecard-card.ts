@@ -101,6 +101,9 @@ export class PlacecardCard extends LitElement {
       rowSize: rowSize,
       entities: (config.entities || []).map(parseEntity),
     };
+
+    if( this.config.debug )
+      console.log( JSON.stringify( this.config))
   }
 
   private _parseEntity(config): PlacecardCardEntityConfig {

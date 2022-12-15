@@ -32,4 +32,5 @@ export interface PlacecardCardEntityConfig extends EntityConfig {
   hold_action?: ActionConfig;
   double_tap_action?: ActionConfig;
   size?: number;
+  hide_entity_name?: boolean ;
 }
